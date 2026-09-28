@@ -1,12 +1,8 @@
 import PlaceCard from '../../components/place-card/place-card';
 
-import { offer } from '../..';
+import { offers } from '../../const';
 
-type MainPageProps = {
-  offers: offer[];
-};
-
-export default function MainPage({ offers }: MainPageProps): JSX.Element {
+function MainPage(): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -132,3 +128,5 @@ export default function MainPage({ offers }: MainPageProps): JSX.Element {
     </div>
   );
 }
+
+export default MainPage;
