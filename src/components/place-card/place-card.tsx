@@ -1,10 +1,10 @@
-import { offer } from '../..';
+import { offer } from '../../const';
 
 type PlaceCardProps = {
   offerData: offer;
 };
 
-export default function PlaceCard({ offerData }: PlaceCardProps): JSX.Element {
+function PlaceCard({ offerData }: PlaceCardProps): JSX.Element {
   return (
     <article className="cities__card place-card">
       {offerData.premium && (
@@ -33,7 +33,9 @@ export default function PlaceCard({ offerData }: PlaceCardProps): JSX.Element {
           </div>
           <button
             className={`place-card__bookmark-button button${
-              offerData.inBookmarks ? ' place-card__bookmark-button--active' : ''
+              offerData.inBookmarks
+                ? ' place-card__bookmark-button--active'
+                : ''
             }`}
             type="button"
           >
@@ -59,3 +61,5 @@ export default function PlaceCard({ offerData }: PlaceCardProps): JSX.Element {
     </article>
   );
 }
+
+export default PlaceCard;
