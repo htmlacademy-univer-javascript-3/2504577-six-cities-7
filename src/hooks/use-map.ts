@@ -7,7 +7,7 @@ function useMap(
   city: City,
 ): Map | null {
   const [map, setMap] = useState<Map | null>(null);
-  const { latitude, longitude } = city.location;
+  const { latitude, longitude, zoom } = city.location;
 
   useEffect(() => {
     if (mapRef.current === null) {
@@ -19,7 +19,7 @@ function useMap(
         lat: latitude,
         lng: longitude,
       },
-      zoom: 10,
+      zoom,
     });
 
     new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -32,7 +32,7 @@ function useMap(
     return () => {
       instance.remove();
     };
-  }, [mapRef, city]);
+  }, [mapRef, latitude, longitude, zoom]);
 
   return map;
 }

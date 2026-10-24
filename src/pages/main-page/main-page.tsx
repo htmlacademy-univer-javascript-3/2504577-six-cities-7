@@ -20,7 +20,7 @@ function MainPage({ offers }: MainPageProps): JSX.Element {
   ];
 
   const [activeCardId, setActiveCardId] = useState<number | null>(null);
-  const cityOffers = offers.filter((offer) => offer.city === AMSTERDAM.name);
+  const cityOffers = offers.filter((offer) => offer.city.name === AMSTERDAM.name);
 
   return (
     <div className="page page--gray page--main">

@@ -1,6 +1,6 @@
+import cn from 'classnames';
 import { Link, useLocation } from 'react-router-dom';
 import { AppRoute, AuthorizationStatus } from '../../const';
-import cn from 'classnames';
 
 type HeaderProps = {
   authorizationStatus: AuthorizationStatus;

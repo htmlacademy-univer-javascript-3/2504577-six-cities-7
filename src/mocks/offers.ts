@@ -1,9 +1,10 @@
 import { Offer } from '../const';
+import { AMSTERDAM } from './city';
 
 export const offers: Offer[] = [
   {
     id: 1,
-    city: 'Amsterdam',
+    city: AMSTERDAM,
     location: {
       latitude: 52.3909553943508,
       longitude: 4.85309666406198,
@@ -51,7 +52,7 @@ export const offers: Offer[] = [
   },
   {
     id: 2,
-    city: 'Amsterdam',
+    city: AMSTERDAM,
     location: {
       latitude: 52.3609553943508,
       longitude: 4.85309666406198,
@@ -99,7 +100,7 @@ export const offers: Offer[] = [
   },
   {
     id: 3,
-    city: 'Amsterdam',
+    city: AMSTERDAM,
     location: {
       latitude: 52.3909553943508,
       longitude: 4.929309666406198,
@@ -147,7 +148,7 @@ export const offers: Offer[] = [
   },
   {
     id: 4,
-    city: 'Amsterdam',
+    city: AMSTERDAM,
     location: {
       latitude: 52.3809553943508,
       longitude: 4.939309666406198,
