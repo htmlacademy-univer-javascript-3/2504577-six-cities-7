@@ -16,9 +16,33 @@ export type Host = {
   isPro: boolean;
 };
 
+export type Review = {
+  id: number;
+  offerId: number;
+  user: {
+    name: string;
+    avatarUrl: string;
+  };
+  rating: number;
+  comment: string;
+  date: string;
+};
+
+export type Location = {
+  latitude: number;
+  longitude: number;
+  zoom: number;
+};
+
+export type City = {
+  name: string;
+  location: Location;
+};
+
 export type Offer = {
   id: number;
-  city: string;
+  city: City;
+  location: Location;
   premium: boolean;
   name: string;
   img: string;

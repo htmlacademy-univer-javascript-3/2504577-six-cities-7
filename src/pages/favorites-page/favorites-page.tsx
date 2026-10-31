@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import PlaceCardsList from '../../components/place-cards-list/place-cards-list';
-
 import { AppRoute, Offer } from '../../const';
 
 type FavoritesPageProps = {
@@ -9,7 +8,7 @@ type FavoritesPageProps = {
 
 function FavoritesPage({ offers }: FavoritesPageProps): JSX.Element {
   const favoriteOffers = offers.filter((offer) => offer.inBookmarks);
-  const cities = [...new Set(favoriteOffers.map((offer) => offer.city))];
+  const cities = [...new Set(favoriteOffers.map((offer) => offer.city.name))];
 
   return (
     <div className="page">
@@ -70,7 +69,7 @@ function FavoritesPage({ offers }: FavoritesPageProps): JSX.Element {
                   </div>
                   <PlaceCardsList
                     offers={favoriteOffers.filter(
-                      (offer) => offer.city === city,
+                      (offer) => offer.city.name === city,
                     )}
                     typeCard="favorites"
                   />
